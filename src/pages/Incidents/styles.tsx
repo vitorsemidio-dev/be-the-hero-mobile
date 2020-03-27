@@ -36,4 +36,11 @@ export default StyleSheet.create({
     lineHeight: 24,
     color: '#737380',
   },
+
+  incidentList: {},
+  incident: {},
+  incidentProperty: {},
+  incidentValue: {},
+  detailsButtonText: {},
+  detailsButton: {},
 });
