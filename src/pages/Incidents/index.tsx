@@ -23,6 +23,7 @@ export default function Incidents() {
         style={styles.incidentList}
         data={[1,2,3]}
         keyExtractor={incident => String(incident)}
+        showsVerticalScrollIndicator={false}
         renderItem={() => (
           <View style={styles.incident}>
             <Text style={styles.incidentProperty}>ONG:</Text>
