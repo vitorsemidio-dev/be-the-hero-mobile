@@ -17,6 +17,39 @@ export default function Detail() {
           
         </TouchableOpacity>
       </View>
+
+      <View style={styles.incident}>
+        <Text style={styles.incidentProperty}>ONG:</Text>
+        <Text style={styles.incidentValue}>XXX</Text>
+        
+        <Text style={styles.incidentProperty}>CASO:</Text>
+        <Text style={styles.incidentValue}>Descrição caso</Text>
+
+        <Text style={styles.incidentProperty}>VALOR:</Text>
+        <Text style={styles.incidentValue}>R$100,00</Text>
+      </View>
+
+      <View style={styles.contactBox}>
+        <Text style={styles.heroTitle}>
+          Salve o dia!
+        </Text>
+        <Text style={styles.heroTitle}>
+          Seja o herói desse caso.
+        </Text>
+        <Text style={styles.heroDescription}>
+          Entre em contato:
+        </Text>
+
+        <View style={styles.actions}>
+          <TouchableOpacity style={styles.action} onPress={() => {}}>
+            <Text style={styles.actionText}>WhatsApp</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.action} onPress={() => {}}>
+            <Text style={styles.actionText}>E-mail</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   )
 }
