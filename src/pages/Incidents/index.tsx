@@ -22,29 +22,30 @@ export default function Incidents() {
       <FlatList 
         style={styles.incidentList}
         data={[1,2,3]}
+        keyExtractor={incident => String(incident)}
         renderItem={() => (
           <View style={styles.incident}>
-          <Text style={styles.incidentProperty}>ONG:</Text>
-          <Text style={styles.incidentValue}>XXX</Text>
-          
-          <Text style={styles.incidentProperty}>CASO:</Text>
-          <Text style={styles.incidentValue}>Descrição caso</Text>
+            <Text style={styles.incidentProperty}>ONG:</Text>
+            <Text style={styles.incidentValue}>XXX</Text>
+            
+            <Text style={styles.incidentProperty}>CASO:</Text>
+            <Text style={styles.incidentValue}>Descrição caso</Text>
 
-          <Text style={styles.incidentProperty}>VALOR:</Text>
-          <Text style={styles.incidentValue}>R$100,00</Text>
+            <Text style={styles.incidentProperty}>VALOR:</Text>
+            <Text style={styles.incidentValue}>R$100,00</Text>
 
-          <TouchableOpacity
-            style={styles.detailsButton}
-            onPress={() => {}}
-          >
-            <Text style={styles.detailsButtonText}>
-              Ver mais detalhes
-            </Text>
+            <TouchableOpacity
+              style={styles.detailsButton}
+              onPress={() => {}}
+            >
+              <Text style={styles.detailsButtonText}>
+                Ver mais detalhes
+              </Text>
 
-            <Feather name="arrow-right" size={16} color="#e02041" />
+              <Feather name="arrow-right" size={16} color="#e02041" />
 
-          </TouchableOpacity>
-        </View>
+            </TouchableOpacity>
+          </View>
         )}
       />
     </View>
