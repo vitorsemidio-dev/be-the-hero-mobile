@@ -1,6 +1,6 @@
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 import * as MailComposer from 'expo-mail-composer';
 
@@ -10,6 +10,9 @@ import logoImg from '../../assets/logo.png';
 
 export default function Detail() {
   const navigation = useNavigation();
+  const route = useRoute();
+
+  const incident = route.params.incident;
   const message = 'Olá, xxx! Estou entrando em contato pois gostaria de ajudar no caso "caso_x" com o valor de R$100,00';
 
   const navigateBack = () => {
@@ -40,14 +43,23 @@ export default function Detail() {
       </View>
 
       <View style={styles.incident}>
-        <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
-        <Text style={styles.incidentValue}>XXX</Text>
+        <Text style={[styles.incidentProperty, { marginTop: 0}]}>ONG:</Text>
+        <Text style={styles.incidentValue}>
+          {incident.name}
+        </Text>
         
         <Text style={styles.incidentProperty}>CASO:</Text>
-        <Text style={styles.incidentValue}>Descrição caso</Text>
+        <Text style={styles.incidentValue}>
+          {incident.title}
+        </Text>
 
         <Text style={styles.incidentProperty}>VALOR:</Text>
-        <Text style={styles.incidentValue}>R$100,00</Text>
+        <Text style={styles.incidentValue}>
+          {Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+          }).format(incident.value)}
+        </Text>
       </View>
 
       <View style={styles.contactBox}>
