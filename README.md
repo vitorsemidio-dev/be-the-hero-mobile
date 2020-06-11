@@ -2,22 +2,22 @@
   <img src="./.github/logo.svg" width="300px"/>
 </p>
 
-<p align="center">
-  <img src="./.github/react.svg">
-  <img src="./.github/github.svg">
-  <img src="./.github/visual_studio_code.svg">
-</p>
-
 # Semana Omnistack 11
 
 **Be The Hero** é uma aplicação que visa conectar ONG's que precisam de ajuda e pessoas dispostas a ajudar. Através da interface web a ONG's cadastra seus dados e adiciona informações sobre os casos. E no app mobile, as pessoas podem entrar em contato com as instituições através de e-mail ou whatsapp.
 
+## 📹 Video
+
+<h1 align="center">
+  <img src=".github/be-the-hero-01.gif" width="400px" />
+</h1>
+
+---
 
 ## ✋🏻 Be The Hero Backend e Web 
 
 * [Be The Hero Backend](https://github.com/vitorsemidio-dev/be-the-hero-backend) 
 * [Be The Hero Web](https://github.com/vitorsemidio-dev/be-the-hero-web) 
-
 
 ## 🚀 Como executar o projeto
 
@@ -33,6 +33,7 @@
 ```
   ├── Expo MailComposer
   ├── FlatList
+  ├── React Native
   └── React Navigation
 ```
 
@@ -52,4 +53,10 @@ export default Incidents() {
   )
 }
 ```
+### Exemplo de loading novos casos
 
+
+
+<h1 align="center">
+  <img src=".github/be-the-hero-02.gif" width="400px" />
+</h1>
