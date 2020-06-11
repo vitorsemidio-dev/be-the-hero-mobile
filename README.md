@@ -13,33 +13,43 @@
 **Be The Hero** é uma aplicação que visa conectar ONG's que precisam de ajuda e pessoas dispostas a ajudar. Através da interface web a ONG's cadastra seus dados e adiciona informações sobre os casos. E no app mobile, as pessoas podem entrar em contato com as instituições através de e-mail ou whatsapp.
 
 
-## ✋🏻 Be The Hero Backend e Mobile 
+## ✋🏻 Be The Hero Backend e Web 
 
 * [Be The Hero Backend](https://github.com/vitorsemidio-dev/be-the-hero-backend) 
-* [Be The Hero Mobile](https://github.com/vitorsemidio-dev/be-the-hero-mobile) 
+* [Be The Hero Web](https://github.com/vitorsemidio-dev/be-the-hero-web) 
 
 
 ## 🚀 Como executar o projeto
 
-1. Clone este repositório através do comando `git clone https://github.com/vitorsemidio-dev/be-the-hero-web`
+0. **Pré-requisito: ter o backend rodando**
+1. Clone este repositório através do comando `git clone https://github.com/vitorsemidio-dev/be-the-hero-mobile`
 2. Troque para o diretório do projeto
 3. Rode `yarn` ou `npm install` para instalar todas as dependências
-4. Rode `yarn start` ou `npm start` para iniciar a aplicação
+4. Rode `expo start` para iniciar a aplicação
 
 
 ## 🎓 Aprendizado
 
 ```
-  ├── sqlite
-  ├── jest
-  ├── celebrate
-  └── knex
+  ├── Expo MailComposer
+  ├── FlatList
+  └── React Navigation
 ```
 
-1.  **`sqlite`**: Banco de dados utilizado para armazenar os dados da aplicação. Para criação ou alteração da estrutura da tabelas são utilizados *migrations*
 
-2.  **`knex`**: É um criador de query SQL para alguns banco de dados, como por exemplo: Postgres, MySQL, SQLite3. Possui um design flexível e portável para usá-lo com diferentes bancos.
+## 📜 FlatList
 
-3.  **`jest`**: É um Framework Web voltado para testes automatizados. Com ele é possível criar vários cenários de testes conforme e necessidade de sua aplicação;
+Componente utilizado para listagem de casos. Por padrão, o mobile só lista os casos da primeira página (5 casos). Com este componente, quando o usuário chega perto do fim do scroll, ele realiza uma nova requisição para buscar os dados da página seguinte.
 
-4.  **`celebrate`**: É uma biblioteca que nos permite fazer validações sobre dados que nossas rotas recebem. Validar se os campos necessários foram informados e/ou se estão com a tipagem correta antes de passar para os controllers;
+```jsx
+export default Incidents() {
+  return (
+    <FlatList
+      showsVerticalScrollIndicator={true}
+      onEndReached={loadIncidents}
+      onEndReachedThreshold={0.8}
+    />
+  )
+}
+```
+
